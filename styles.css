@@ -8,15 +8,16 @@
     margin:auto;
 }
 .square{
-    background-color: chartreuse;
     margin-left:5px;
     margin-top:20px;
+    width: 70px;
+    height: 70px;
 }
 .red{
     background-image: url("/images/red.png");
-    background-size: cover;
+    background-size: contain;
 }
 .yellow{
     background-image: url("/images/yellow.png");
-    background-size: cover;
+    background-size: contain;
 }
