@@ -1,6 +1,16 @@
 let turn='red';
 const head=document.getElementById("head");
-function playGame(id){
+
+const squares=[];//array that stores each square at each index
+function winner(){
+    for(let i=1;i<10;i++){
+        squares[i]=document.getElementById('item+${id}');
+        console.log(squares[i])
+    }
+}
+
+
+function playGame(id){//Switching between players turns
     let square=document.getElementById(id);
     if(turn==='red' && square.innerHTML==""){
         turn='yellow';
@@ -14,3 +24,4 @@ function playGame(id){
     }
 
 }
+winner();
