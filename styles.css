@@ -8,15 +8,17 @@
     margin:auto;
 }
 .square{
-    margin-left:5px;
-    margin-top:20px;
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height:90px;
+    margin-top: 11px;
+    margin-left: 5px;
 }
 .red{
     background-image: url("/images/red.png");
     background-size: contain;
+    background-repeat: no-repeat;
 }
+    
 .yellow{
     background-image: url("/images/yellow.png");
     background-size: contain;
