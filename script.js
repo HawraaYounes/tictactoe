@@ -6,27 +6,25 @@ const squares=[];//array that stores each square at each index
 function winner(){
 
     for(let i=1;i<10;i++){
-        squares[i]=document.getElementById('item'+i).classList;
+        squares[i]=document.getElementById('item'+i).className;
     }
-    if(squares[1]== squares[2] && squares[2]==squares[3] && squares[1]!=""){
-        restart(1,2,3);
-        console.log(squares[1])
+    if(squares[1]== squares[2]==squares[3]=='active' && squares[1]!=''){
+        restart();
     }
     else if(squares[4]== squares[5] && squares[5]==squares[6] && squares[5]!=""){
-        restart(4,5,6);
+        restart();
     }
     else if(squares[7]== squares[8] && squares[8]==squares[9] && squares[9]!=""){
-        restart(7,8,9);
+        restart();
     }
     else if(squares[1]== squares[4] && squares[4]==squares[7] && squares[7]!= ''){
-        console.log("done")
-        restart(1,4,7);
+        restart();
     }
     else if(squares[2]== squares[5] && squares[5]==squares[8] && squares[8]!=""){
-        restart(2,5,8);
+        restart();
     }
     else if(squares[3]== squares[6] && squares[6]==squares[9] && squares[9]!=""){
-        restart(3,6,9);
+        restart();
     }
     else if(squares[1]== squares[5] && squares[5]==squares[9] && squares[9]!=""){
         restart();
@@ -44,12 +42,12 @@ function restart(){
     {
         console.log(turn)
         redScore+=1;
-        head.innerHTML="Red Win! Score: "+redScore;
+        head.innerHTML="Yellow Win! Score: "+yellowScore;
         
     }
     else{
         yellowScore+=1;
-        head.innerHTML="Yellow Win! Score: "+yellowScore;
+        head.innerHTML="Red Win! Score: "+redScore;
     }
     for(let i=1;i<10;i++){
         squares[i].classList.remove("red");
